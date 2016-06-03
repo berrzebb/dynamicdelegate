@@ -99,7 +99,7 @@ public:
 		return rhs.get();
 	}
 	Ret operator ()(Args... args) {
-		Invoke(args...);
+		return Invoke(args...);
 	}
 	const FunctionPtr get() {
 		return static_cast<FunctionPtr>(HandlePtr.ToPointer());
